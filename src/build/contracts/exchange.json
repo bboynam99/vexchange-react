@@ -206,7 +206,7 @@
   "gas": 116636
   },
   {
-  "name": "getEthToTokenPrice",
+  "name": "getEthToTokenInputPrice",
   "outputs": [
   {
   "type": "uint256",
@@ -352,7 +352,7 @@
   "gas": 53499
   },
   {
-  "name": "getTokenToEthPrice",
+  "name": "getTokenToEthInputPrice",
   "outputs": [
   {
   "type": "uint256",

@@ -4,7 +4,7 @@ import cc from 'cryptocompare';
 
 import ContractJson from "../build/contracts/exchange.json";
 
-const address = "0x534BD48d7CfB0602EA3708cfdDacFeb2242c843e";
+const address = "0x717773B6AfE9eEd93F2cD350C455c2b6E916F14a";
 const web3 = thorify(new Web3(), "http://127.0.0.1:8669/");
 const Contract = new web3.eth.Contract(ContractJson.abi, address);
 
@@ -30,23 +30,23 @@ export const fetchFees = () => ({
 });
 
 export const calculateVTHO = (val) => {
-  const { getEthToTokenPrice } = Contract.methods;
+  const { getEthToTokenInputPrice } = Contract.methods;
   const num = web3.utils.toWei(val);
 
   return {
     type: 'CALCULATE_VTHO',
-    payload: getEthToTokenPrice(num).call(),
+    payload: getEthToTokenInputPrice(num).call(),
     meta: { web3 },
   };
 };
 
 export const calculateVET = (val) => {
-  const { getTokenToEthPrice } = Contract.methods;
+  const { getTokenToEthInputPrice } = Contract.methods;
   const num = web3.utils.toWei(val);
 
   return {
     type: 'CALCULATE_VET',
-    payload: getTokenToEthPrice(num).call(),
+    payload: getTokenToEthInputPrice(num).call(),
     meta: { web3 },
   };
 };
