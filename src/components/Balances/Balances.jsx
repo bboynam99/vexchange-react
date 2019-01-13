@@ -74,7 +74,7 @@ class Balances extends Component {
       <Wrapper>
         <Container>
           <Links>
-            <Link href="https://explore.veforge.com/accounts/0x717773B6AfE9eEd93F2cD350C455c2b6E916F14a" target="_blank">
+            <Link href="https://explore.veforge.com/accounts/0xc63e4E69Aa1A8d28fa50bE30A4cB330712b9d93f" target="_blank">
               <Label>VET Balance: </Label>
               <FormattedNumber value={Balances.format(balances.vet)} />
               {' '}
@@ -83,7 +83,7 @@ class Balances extends Component {
                 currency="USD" style="currency" />)
             </Link>
 
-            <Link href="https://explore.veforge.com/accounts/0x717773B6AfE9eEd93F2cD350C455c2b6E916F14a" target="_blank">
+            <Link href="https://explore.veforge.com/accounts/0xc63e4E69Aa1A8d28fa50bE30A4cB330712b9d93f" target="_blank">
               <Label>VTHO Balance: </Label>
               <FormattedNumber value={Balances.format(balances.vtho)} />
               {' '}
